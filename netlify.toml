@@ -1,13 +1,11 @@
+[build]
+publish = "frontend"
+command = "echo 'No build command for static files'"
+
 [functions]
 directory = "netlify/functions"
-node_bundler = "esbuild"
 
-[build]
-command = "npm run build:frontend"
-publish = "frontend/build"
-
-[[redirects]]
-force = true
+[redirects]
 from = "/api/*"
-status = 200
 to = "/.netlify/functions/api/:splat"
+status = 200
