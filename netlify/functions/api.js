@@ -1,26 +1,26 @@
-import express from "express";
-import serverless from "serverless-http";
-import fetch from "node-fetch";
-import dotenv from "dotenv";
+const express = require("express"); // Changed from import to require for CommonJS compatibility
+const serverless = require("serverless-http");
+const fetch = require("node-fetch"); // Use `require` for `node-fetch` v2
+const dotenv = require("dotenv");
 
 dotenv.config();
 
 const api = express();
 const router = express.Router();
-const RECIPE_API_KEY = process.env.RECIPE_API_KEY;  // Use your Spoontacular API key
+const RECIPE_API_KEY = process.env.RECIPE_API_KEY;
 
 router.get("/recipes", async (req, res) => {
-    console.log('Received request with query:', req.query.query);  // Check the query
+    console.log('Received request with query:', req.query.query);
     try {
         const query = req.query.query || "vegetarian";
-        console.log('Fetching recipes for:', query);  // Check the query being used
-
+        
+        console.log('Fetching recipes for:', query);
         const response = await fetch(
             `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=5&apiKey=${RECIPE_API_KEY}`
         );
         const data = await response.json();
 
-        console.log('Received data:', data);  // Log the API response
+        console.log('Received data:', data);
 
         res.json({ recipes: data.results });
     } catch (error) {
@@ -29,7 +29,6 @@ router.get("/recipes", async (req, res) => {
     }
 });
 
-
 api.use("/api", router);
 
-export const handler = serverless(api);
+module.exports.handler = serverless(api);
