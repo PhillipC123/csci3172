@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "start": "node netlify/functions/api.js"
+    "start": "node netlify/functions/api.js",
+    "build": "cd labs/lab5 && npm run build"
   },
   "keywords": [],
   "author": "",
