@@ -5,12 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "start": "node netlify/functions/api.js"
+    "start": "node netlify/functions/api.js",
+    "build:frontend": "cd frontend && npm install && npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@netlify/functions": "^3.0.1",
     "dotenv": "^16.4.7",
@@ -29,3 +26,4 @@
     ]
   }
 }
+
