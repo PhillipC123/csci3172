@@ -1,6 +1,5 @@
 [build]
 publish = "frontend"
-command = "echo 'No build command for static files'"
 
 [functions]
 directory = "netlify/functions"
