@@ -245,3 +245,4 @@ button:focus {
 ## Acknowledgments
 
 * Lectures & In-Class Examples
+* Lab5: Project Setup Guide
