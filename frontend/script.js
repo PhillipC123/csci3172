@@ -1,5 +1,5 @@
 async function getRecipes() {
-    console.log("Fetching recipes...");  // Add this line to confirm the function is being called
+    console.log("Fetching recipes..."); 
     const query = document.getElementById("recipe").value;
     if (!query) {
         alert("Please enter a recipe query.");
