@@ -2,7 +2,7 @@
 publish = "frontend/"
 
 [functions]
-directory = "netlify/functions"
+directory = "netlify/functions/"
 
 [redirects]
 from = "/api/*"
