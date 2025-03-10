@@ -5,7 +5,7 @@ publish = "frontend/"
 directory = "netlify/functions/"
 
 [redirects]
-from = "/api/*"
-to = "/.netlify/functions/api/:splat"
+from = "/api/recipes"
+to = "/.netlify/functions/api/recipes"
 status = 200
 
