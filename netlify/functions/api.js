@@ -1,6 +1,6 @@
-const express = require("express"); // Changed from import to require for CommonJS compatibility
+const express = require("express"); 
 const serverless = require("serverless-http");
-const fetch = require("node-fetch"); // Use `require` for `node-fetch` v2
+const fetch = require("node-fetch");
 const dotenv = require("dotenv");
 
 dotenv.config();
