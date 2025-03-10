@@ -7,10 +7,15 @@
     "test": "jest",
     "start": "node netlify/functions/api.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "@netlify/functions": "^3.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "node-fetch": "^3.3.2",
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
