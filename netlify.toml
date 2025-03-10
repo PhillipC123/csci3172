@@ -2,6 +2,10 @@
 directory = "netlify/functions"
 node_bundler = "esbuild"
 
+[build]
+command = "npm run build:frontend"
+publish = "frontend
+
 [[redirects]]
 force = true
 from = "/api/*"
