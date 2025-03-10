@@ -2,7 +2,6 @@
   "name": "recipe-app",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "jest",
     "start": "node netlify/functions/api.js"
