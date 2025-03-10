@@ -1,5 +1,5 @@
 [build]
-publish = "frontend"
+publish = "frontend/build"
 
 [functions]
 directory = "netlify/functions"
@@ -8,3 +8,4 @@ directory = "netlify/functions"
 from = "/api/*"
 to = "/.netlify/functions/api/:splat"
 status = 200
+
